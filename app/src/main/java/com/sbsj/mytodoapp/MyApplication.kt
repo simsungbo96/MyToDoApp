@@ -1,6 +1,7 @@
 package com.sbsj.mytodoapp
 
 import android.app.Application
+import com.sbsj.mytodoapp.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -13,7 +14,7 @@ class MyApplication : Application(){
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@MyApplication)
-            modules()
+            modules(appModule)
 
 
 
