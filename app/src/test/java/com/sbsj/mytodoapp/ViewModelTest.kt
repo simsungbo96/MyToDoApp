@@ -22,7 +22,7 @@ import org.mockito.junit.MockitoRule
 
 
 @ExperimentalCoroutinesApi // test용 이므로 해당 어노테이션 사용.
-internal class ViewModelTest : KoinTest  {
+internal abstract class ViewModelTest : KoinTest  {
 
     @get:Rule
     val mockitoRule : MockitoRule = MockitoJUnit.rule()
